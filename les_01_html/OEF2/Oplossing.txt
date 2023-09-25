@@ -1,0 +1,5 @@
+3: HTML
+4: SportFocus vzw - Zwemlessen - Sportkampen - Voetbal
+5: UTF-8
+6: de validator geeft enkele errors, dus de pagina is niet compleet valide.
+7: Deze lijn code bepaalt het pictogram van de pagina. Je ziet dit pictogram bovenaan links naast de paginatitel.
