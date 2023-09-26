@@ -1,0 +1,37 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.Container {
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.Box {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    float: left;
+}
+
+.ColorRed {
+    background-color: red;
+}
+
+.ColorGreen {
+    background-color: green;
+}
+
+.ColorBlue {
+    background-color: blue;
+}
+
+.ColorYellow {
+    background-color: yellow;
+}
+
+
+
