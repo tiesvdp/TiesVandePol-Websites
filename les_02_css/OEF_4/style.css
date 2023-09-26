@@ -1,0 +1,27 @@
+body {
+    font: Arial, sans serif;
+}
+
+.Section {
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    border: 3px solid;
+    border-color: #000;
+    border-radius: 10px;
+}
+
+#S1 {
+    color: #600;
+    background-color: #e6a2a2;
+}
+
+#S2 {
+    color: #a2c4e6;
+    background-color: #004080;
+}
+
+#S3 {
+    color: #a2e6c4;
+    background-color: #00663d;
+}
