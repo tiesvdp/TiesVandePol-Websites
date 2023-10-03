@@ -1,0 +1,29 @@
+:root{
+    --blauw-thomasmore: #082333;
+    --oranje-thomasmore: #ec6338;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font: 16px;
+    color: darkblue;
+}
+.afbeelding{
+    width: 300px;
+}
+li{
+    margin: 0%;
+    padding: 3px;
+}
+ol{
+    background-color: var(--oranje-thomasmore);
+    color: white;
+}
+ul{
+    background-color: var(--blauw-thomasmore);
+    margin-right: 5px;
+    color: white;
+}
+.container{
+    padding: 20px;
+    width: 400px;
+}

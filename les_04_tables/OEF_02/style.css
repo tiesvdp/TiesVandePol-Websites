@@ -1,0 +1,35 @@
+:root
+{
+    --blauw-thomasmore: #082333;
+    --oranje-thomasmore: #ec6639;
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+table
+{
+    border: 1px solid darkblue;
+    border-collapse: collapse;
+    text-align: center;
+}
+th, td, tr
+{
+    border: 1px solid darkblue;
+    border-collapse: collapse;
+    height: 50px;
+}
+th
+{
+    background-color: var(--oranje-thomasmore);
+    color: white;
+}
+.blauwVak
+{
+    background-color: #009cab;
+    font-weight: bold;
+    width: 75px;
+    color: white;
+}
+

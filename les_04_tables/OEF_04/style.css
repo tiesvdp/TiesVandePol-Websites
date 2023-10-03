@@ -1,0 +1,60 @@
+:root
+{
+    --blauw-thomasmore: #082333;
+    --oranje-thomasmore: #ec6338;
+}
+body 
+{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 12px;
+}
+h1
+{
+    color: var(--oranje-thomasmore);
+    font-weight: bold;
+}
+#logo
+{
+    width: 150px;
+}
+table
+{
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+    text-align: center;
+}
+tr
+{
+    border: 1px solid lightgray;
+    text-align: center;
+    height: 50px;
+}
+th
+{
+    border: 1px solid lightgray;
+    text-align: center;
+}
+td
+{
+    border: 1px solid lightgray;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+caption
+{
+    font-size: 12px;
+    padding: 15px;
+    caption-side: bottom;
+}
+.nadruk
+{
+    font-weight: bold;
+}
+.startdag
+{
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    background-color: var(--oranje-thomasmore);
+    color: white;
+}

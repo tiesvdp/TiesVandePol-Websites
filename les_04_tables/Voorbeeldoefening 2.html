@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabel: colgroup</title>
+    <style>
+      table {
+        margin: 20px 0;
+      }
+
+      caption {
+        padding: 10px;
+        caption-side: bottom;
+        color: #c03d1e;
+      }
+
+      .nr {
+        width: 75px;
+        background-color: #f4ddd7;
+      }
+
+      .velden {
+        width: 350px;
+        background-color: #fdfabe;
+      }
+
+      table.border {
+        margin: 1em;
+        /* 1em means "equal to the current font size" */
+        border: dotted 1px gray;
+        border-collapse: collapse;
+        /* separate; */
+      }
+
+      table.border td {
+        border: dotted 1px gray;
+        padding: 5px;
+        text-align: center;
+      }
+
+      table.border th {
+        border: dotted 1px gray;
+        padding: 5px;
+        background-color: #c03d1e;
+        color: white;
+      }
+
+      /* smartphones */
+
+      col.first {
+        width: 150px;
+        background-color: #eed;
+      }
+
+      col.second {
+        width: 200px;
+        background-color: #ddc;
+      }
+
+      col.third {
+        width: 100px;
+        background-color: #ccb;
+        padding-left: 1em;
+      }
+
+      colgroup.other col {
+        background-color: #ded;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Tabel met colgroup</h1>
+
+    <table class="border">
+      <caption>
+        Voorbeeldverhalen
+      </caption>
+      <colgroup>
+        <col class="nr" />
+        <col />
+      </colgroup>
+      <colgroup>
+        <col span="2" class="velden" />
+      </colgroup>
+      <tr>
+        <th>Nr</th>
+        <th>Reeks</th>
+        <th>Titel</th>
+        <th>ISBN</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Jommeke</td>
+        <td>De jacht op een voetbal</td>
+        <td>90-6334-426-0</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jommeke</td>
+        <td>De zingende aap</td>
+        <td>90-6334-290-X</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Jommeke</td>
+        <td>De Koningin van Onderland</td>
+        <td>90-6334-424-4</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Jommeke</td>
+        <td>Purperen pillen</td>
+        <td>90-6334-460-0</td>
+      </tr>
+    </table>
+
+    <table class="border">
+      <caption>
+        Smartphones
+      </caption>
+      <colgroup>
+        <col class="first" />
+        <col class="second" />
+        <col class="third" />
+      </colgroup>
+      <colgroup class="other">
+        <col span="5" />
+      </colgroup>
+
+      <tr>
+        <th>Merk</th>
+        <th>Model</th>
+        <th>Besturingssysteem</th>
+        <th>Opslag (GB)</th>
+        <th>RAM (GB)</th>
+        <th>Beeldschermformaat (inch)</th>
+        <th>Camera (MP)</th>
+        <th>Prijs (USD)</th>
+      </tr>
+      <tr>
+        <td>Samsung</td>
+        <td>Galaxy S21</td>
+        <td>Android</td>
+        <td>128</td>
+        <td>8</td>
+        <td>6.2</td>
+        <td>12+12+64</td>
+        <td>799</td>
+      </tr>
+      <tr>
+        <td>Apple</td>
+        <td>iPhone 12</td>
+        <td>iOS</td>
+        <td>256</td>
+        <td>4</td>
+        <td>6.1</td>
+        <td>12+12</td>
+        <td>999</td>
+      </tr>
+      <tr>
+        <td>Google</td>
+        <td>Pixel 6</td>
+        <td>Android</td>
+        <td>128</td>
+        <td>8</td>
+        <td>6.4</td>
+        <td>50+12</td>
+        <td>799</td>
+      </tr>
+      <tr>
+        <td>OnePlus</td>
+        <td>9 Pro</td>
+        <td>Android</td>
+        <td>256</td>
+        <td>12</td>
+        <td>6.7</td>
+        <td>48+8+50+2</td>
+        <td>969</td>
+      </tr>
+      <tr>
+        <td>Xiaomi</td>
+        <td>Redmi Note 10 Pro</td>
+        <td>Android</td>
+        <td>128</td>
+        <td>6</td>
+        <td>6.67</td>
+        <td>108+8+5+2</td>
+        <td>279</td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+:root{
+    --color-thomasmore: #ec6338;
+    --blauw-thomasmore: #082333;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:12;
+}
+hr{
+    height: 1px;
+    background-color: var(--blauw-thomasmore);
+}
+h1{
+    padding: 0%;
+    margin: 0%;
+    font-size: 2em;
+    color: var(--color-thomasmore);
+}
+p{
+    margin: 0%;
+    padding: 15px;
+}
+a:hover{
+    color: var(--color-thomasmore);
+}
+a:link{
+    text-decoration: underline;
+}
+.container{ 
+    margin: auto;
+    text-align: center;
+    background-color: var(--blauw-thomasmore);
+}
+.afbeelding-breedte{
+    width: 200px;
+}
