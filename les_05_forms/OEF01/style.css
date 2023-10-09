@@ -1,28 +1,28 @@
-body
-{
+body{
     font-family: 'Courier New', Courier, monospace;
 }
-
-.input
-{
-    background-color: lightblue;
-}
-
-form
-{
+form{
     width: 40%;
-    padding: 15px;
 }
-
-.input:focus
-{
+.input{
+    background-color: lightblue;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.input:focus{
     background-color: white;
 }
-
-.label,
-.submit
-{
+.label{
     font-size: large;
     font-weight: bold;
-    padding: 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.submit{
+    font-size: large;
+    font-weight: bold;
+    padding: 8px;
+    margin-top: 8px;
 }
