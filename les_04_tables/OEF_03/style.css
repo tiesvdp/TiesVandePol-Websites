@@ -1,42 +1,32 @@
-:root
-{
+:root{
     --blauw-thomasmore: #082333;
     --oranje-thomasmore: #ec6338;
 }
-body
-{
-    font-size: auto;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
-table
-{
+table{
     border: 3px solid black;
     border-collapse: collapse;    
 }
-tr, th, td
-{
+tr, th, td{
     border: 1px solid black;
     height: 50px;
     margin: 4px;
     text-align: center;
 }
-th
-{
+th{
     background-color: lightgray;
 }
-.kolomBreed
-{
+.kolomBreed{
     width: 200px;
 }
-.kolomSmal
-{
+.kolomSmal{
     width: 100px;
 }
-.groen
-{
+.groen{
     background-color: lightgreen;
 }
-.rood
-{
+.rood{
     background-color: rgb(209, 53, 53);
 }
