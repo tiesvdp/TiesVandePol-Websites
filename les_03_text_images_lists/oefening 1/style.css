@@ -29,7 +29,7 @@ a:hover{
     color: var(--color-thomasmore);
 }
 
-a:link{
+a{
     padding: 15px;
     margin: 0%;
     text-decoration: underline;
