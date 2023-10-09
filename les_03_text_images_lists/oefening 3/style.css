@@ -1,38 +1,32 @@
 :root{
-    --color-thomasmore: #ec6338;
+    --oranje-thomasmore: #ec6338;
     --blauw-thomasmore: #082333;
 }
 body{
-    color: darkblue;
+    color: var(--blauw-thomasmore);
+    font-family:Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
 h1{
     margin: 0%;
     padding: 0%;
     font-size: 2em;
-    color: var(--color-thomasmore);
+    color: var(--oranje-thomasmore);
 }
-
 h2{
     margin: 0%;
     padding-top: 10px;
     font-size: 1.5em;
     color: var(--blauw-thomasmore);
 }
-img{
-    margin: 20px;
-}
-.afbeelding{
-    margin: 20px;
-  
-}
-a:link{
+a{
     text-decoration: underline;
-    color:var(--blauw-thomasmore);
+    color: var(--blauw-thomasmore);
 }
 a:hover{
-    color: var(--color-thomasmore);
+    color: var(--oranje-thomasmore);
 }
-.afbeelding-breedte{
+.logo{
     width: 200px;
+    margin: 20px;
 }
