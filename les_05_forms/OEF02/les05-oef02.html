@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>les05-02</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+<div class="container">
+    <form class="form" method="post" action="https://tm-statweb.be/forms.php">
+        <label for="voornaam">Voornaam:</label><br>
+            <input type="text" placeholder="Voornaam" name="voornaam" id="voornaam"><br>
+        <label for="familienaam">Familienaam:</label><br>
+            <input type="text" placeholder="Familienaam" name="familienaam" id="familienaam"><br>
+        <label for="gebruikersnaam">Gebruikersnaam:</label><br>
+            <input type="email" placeholder="Gebruikersnaam" name="gebruikersnaam" id="gebruikersnaam"><br>
+        <label for="nickname">Nickname:</label><br>
+            <input type="text" placeholder="Nickname" name="nickname" id="nickname" required minlength="5" maxlength="15"><br>
+        <label for="paswoord">Paswoord:</label><br>
+            <input type="password" placeholder="Paswoord" name="paswoord" id="paswoord" required><br>
+        <label for="paswoordherhaling">Herhaal paswoord:</label><br>
+            <input type="password" placeholder="Herhaal paswoord" name="paswoordherhaling" id="paswoordherhaling" required><br>
+        <input type="submit" value="Registreren" name="registreren" id="registreren">
+    </form>
+</div>
 </body>
 </html>
