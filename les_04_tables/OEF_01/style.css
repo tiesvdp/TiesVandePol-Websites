@@ -2,39 +2,30 @@
     --blauw-thomasmore: #082333;
 }
 
-hr
-{
-    width: auto;
-    height: 1px;
-    border-bottom-color: var(--blauw-thomasmore);
-    border-bottom-width: auto;
+hr{
+    border-top: 1px solid var(--blauw-thomasmore);
 }
-table
-{
+table{
     border: solid;
     border-collapse: collapse;
     border: 1px gray;
 }
-caption
-{
+caption{
     padding: 10px;
     caption-side: bottom;
 }
-th, td
-{
-    padding: 10px;
+th, td{
+    padding: 15px;
     margin: 1em;
     border: solid gray 1px;
     border-collapse: collapse;
     text-align: center;
 }
-th
-{
+th{
     background-color: var(--blauw-thomasmore);
     color: white;
 }
-.background
-{
+.background{
     background-color: var(--blauw-thomasmore);
     color: white;
 }
