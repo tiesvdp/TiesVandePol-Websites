@@ -1,32 +1,25 @@
-:root
-{
+:root{
     --blauw-thomasmore: #082333;
     --oranje-thomasmore: #ec6639;
 }
-
-body
-{
+body{
     font-family: Arial, Helvetica, sans-serif;
 }
-table
-{
+table{
     border: 1px solid darkblue;
     border-collapse: collapse;
     text-align: center;
 }
-th, td, tr
-{
+th, td, tr{
     border: 1px solid darkblue;
     border-collapse: collapse;
     height: 50px;
 }
-th
-{
+.th{
     background-color: var(--oranje-thomasmore);
     color: white;
 }
-.blauwVak
-{
+.blauwVak{
     background-color: #009cab;
     font-weight: bold;
     width: 75px;
