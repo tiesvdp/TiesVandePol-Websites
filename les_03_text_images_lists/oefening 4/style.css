@@ -12,7 +12,8 @@ li a{
     display: block;
     color: white;
     text-align: center;
-    padding-top: 14;
+    padding-top: 14px;
+    padding-bottom: 14px;
     padding-left: 16px;
     padding-right: 16px;
     text-decoration: none;
