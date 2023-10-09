@@ -1,16 +1,22 @@
 :root{
-    --thomasmore: #ec6338;
+    --oranje-thomasmore: #ec6338;
     --blauw-thomasmore: #082333;
 }
-
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
 h1{
     padding: 0px;
     margin: 0px;
     font-size: 2em;
-    color: var(--thomasmore);
+    color: var(--oranje-thomasmore);
 }
-a:link{
-    color:var(--blauw-thomasmore);
+div{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+a{
+    color: var(--blauw-thomasmore);
 }
 a:hover{
 color: var(--thomasmore);
