@@ -1,0 +1,40 @@
+body{
+    background-image: url(kompas.jpg);
+    background-size: cover;
+    background-position: fixed;
+    background-attachment: fixed;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5em;
+    margin: 0;
+}
+.Noord{
+    position: fixed;
+    z-index: 1;
+    color: white;
+    left: 50%;
+    align: center
+}
+.Oost{
+    position: fixed;
+    z-index: 1;
+    color: white;
+    top: 50%;
+    right: 2%;
+    align: center
+}
+.Zuid{
+    position: fixed;
+    z-index: 1;
+    color: white;
+    bottom: 0%;
+    left: 50%;
+    align: center
+}
+.West{
+    position: fixed;
+    z-index: 1;
+    color: white;
+    top: 50%;
+    left: 2%;
+    align: center
+}

@@ -1,34 +1,91 @@
+:root{
+    --zwart: #0E0F0A;
+    --blauw: #283544;
+    --grijs: #B9C3CD;
+    --wit: #F4FAFF;
+    --roos: #EF798A;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
+}
 
 body{
-    background-image: url("Essentials/Fotos/Main/Background.jpg");
-    background-color: #F4FAFF;
-    background-position: center center;
-    background-attachment: fixed;
+    background-image: url(IMG/background.jpg);
+    background-color: #0e0f0a71;
+    background-position: absolute;
     background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
+    background-attachment: fixed;
+    color: var(--wit);
 }
 
 h1{
-    width: 500px;
-    height: 50px;
-    margin-left: 60px;
-    font-family: 'Prompt', sans-serif;
-    font-size: 90px;
-    text-align: left;
-    color:#F4FAFF
-    
-    
+    position: absolute;
+    margin: 2%;
+    font-size: 4em;
 }
 
-p1{
-    width: auto;
-    margin-left: 60px;
-    font-family: 'Prompt', sans-serif;
-    font-size: 40px;
-    text-align: left;
+.textbox{
+    position: absolute;
+    width: 26%;
+    height: 20%;
+    left: 70%;
+    margin: 2%;
+    padding: 1em;
+    background-color: #0e0f0a;
+}
+
+h4{
+    font-size: 2em;
+    padding: 0.5em;
+}
+
+p{
+    font-size: 1em;
+    padding: 0.5em;
+}
+
+/* Intro */
+
+.intro{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
     width: 100%;
-    color:#F4FAFF
-    
-
+    height: 100vh;
+    background-color: #0e0f0a;
+    backdrop-filter: invert(5%) blur(5px);
+    transition: 1s;
 }
+
+.logo-header{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--wit);
+}
+
+.logo{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.logo.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
