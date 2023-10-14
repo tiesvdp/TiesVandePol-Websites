@@ -14,45 +14,113 @@
 }
 
 body{
-    background-image: url(IMG/background.jpg);
+    background-image: url(IMG/background-vertical.jpg);
     background-color: #0e0f0a71;
     background-position: absolute;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
     color: var(--wit);
 }
 
-h1{
-    position: absolute;
-    margin: 2%;
-    font-size: 4em;
+.Title{
+    margin-left: 60px;
+    margin-top: 22px;
+    font-size: 3em;
+    display: block;
+    font-weight: bold;
 }
 
 .textbox{
     position: absolute;
-    width: 26%;
-    height: 20%;
-    left: 70%;
-    margin: 2%;
-    padding: 1em;
-    background-color: #0e0f0a;
+    margin-left: 60px;
+    margin-top: 120px;
+    width: 660px;
 }
 
-h4{
-    font-size: 2em;
-    padding: 0.5em;
+.textbox2{
+    position: absolute;
+    width: 660px;
+    right: 0%;
+    margin-right: 60px;
+    margin-top: 530px;
 }
 
-p{
-    font-size: 1em;
-    padding: 0.5em;
+.textboxIntro{
+    font-size: 1.2em;
+    padding: 0;
+    margin: 0;
+    height: fit-content;
+    font-family: 'Montserrat', sans-serif;
 }
+
+.textboxBigText{
+    max-height: 80px;
+    font-size: 4em;
+    padding: 0;
+}
+
+.picbox{
+    position: absolute;
+    left: 1000px;
+    top: 220px;        /*210*/
+    margin-right: 60px;
+}
+
+.picBorder{
+    position: relative;
+    height: 273.3px;
+
+}
+
+.picMain{
+    padding-left: 16px;
+    padding-top: 15px;
+    position: absolute;
+    height: 260px;
+    width: 373.3px;
+}
+
+.nav-bar{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(/IMG/background-navbar.png);
+    background-size: cover;
+    padding: 10px;
+    margin: 26px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.8em;
+    border-radius: 5px;
+    border: 3px solid var(--wit);
+}
+.nav-bar a{
+    
+    text-decoration: none;
+    color: var(--wit);
+    margin: 0 20px;
+    font-size: 1.2em;
+    color: var(--wit);
+}
+.nav-bar a:hover{
+    text-decoration: wavy;
+    color: var(--grijs);
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
 
 /* Intro */
-
 .intro{
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     left: 0;
     top: 0;
     width: 100%;
