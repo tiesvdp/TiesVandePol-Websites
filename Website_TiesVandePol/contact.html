@@ -5,7 +5,7 @@
     <meta name="author" content="Ties Van de Pol">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>T // E S</title> 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
     <!--10/10/2023-->
 </head>
 
-<body>
+<body class="backgroundContact">
 
     <div class="nav-bar">
         <a href="index.html">home</a>
@@ -26,14 +26,47 @@
         <a href="contact.html">contact</a>
     </div>
 
-    <div><a class="Title">C O N T A C T</a></div>
-    <!--<div class="textbox">
-        <a class="TextboxTitle">Hi!</a>
-        <p>My name is Ties, and I'm a developer and musician.</p>
-    </div>-->
+    <div class="Title"><p>C O N T A C T</p></div>
 
-
-
+    <div class="CV-container">
+        <form method="get" action="mailto:tiesvdp@gmail.com">
+            <div>
+                <label for="name">Name</label>
+            </div>
+            <div>
+                <input class="thin" type="text" name="name" id="name" placeholder="My name is..." required>
+           </div>
+            <div>
+                <label for="email">E-mail</label>
+            </div>
+            <div>
+                <input class="thin" type="text" name="email" id="email" placeholder="@something..." required>
+            </div>
+            <div>
+                <label for="subject">Subject</label></div>
+            <div>
+                <input class="thin" type="text" name="subject" id="subject" placeholder="About..." required>
+            </div>
+            <div>
+                <label for="area">Question</label>
+            </div>
+            <div>
+                <input class="thin" type="textarea" name="area" id="area" placeholder="Question..." required>
+            </div>
+            <!--<div>   
+                <Fieldset>
+                    <Legend>Category:</Legend>
+                    <label class="thin" for="music">Music</label>
+                    <input type="radio" name="fieldset" id="music" value="music" required>
+                    <label class="thin" for="development">Development</label>
+                    <input type="radio" name="fieldset" id="development" value="development" required>
+                </Fieldset>
+            </div>-->
+            <div>
+                <input class="thin" type="submit" name="submit" id="submit" value="Submit">
+            </div>
+        </form> 
+    </div>
 
 </body>
 </html>
