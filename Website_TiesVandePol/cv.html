@@ -13,12 +13,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <script src="https://kit.fontawesome.com/0ae6928776.js" crossorigin="anonymous"></script>
     <!--10/10/2023-->
 </head>
 
 <body class="backgroundCV">
 
-    <!--Transition animation-->
+    <!--Transition animation
     <div class="transition">
         <h1 class="transition-header">
             <span class="logoTransition">. </span>
@@ -27,7 +28,7 @@
         </h1>
     </div>
     <script src="js/transition.js"></script>
-    <!--End Transition animation-->
+    End Transition animation-->
 
     <div class="nav-bar">
         <a href="index.html">home</a>
@@ -39,17 +40,171 @@
 
     <div class="Title"><p>C V</p></div>
 
-    <div class="about1">
-        <div class="CV-container">
-
+    <div class="CV-container" id="content">
+        <div class="grid">
+            <section id="left">
+                <div class="foto-container"></div>
+                <div class="left-container">
+                    <br><h3>diplomas</h3><br>
+                    <p><u>Graduate Programming</u></p>
+                    <p>Thomas More Geel</p>
+                    <p>Ongoing</p><br>
+                    <p><u>Bachelor in Pop and Rock Music</u></p>
+                    <p><em>Musician: keys</em></p>
+                    <p>PXL Hasselt</p>
+                    <p>Expected 2024</p><br>
+                    <p><u>Secondary education</u></p>
+                    <p><em>ASO wiskunde-wetenschappen</em></p>
+                    <p>Rozenberg S.O. Mol</p>
+                    <p>2019</p><br>
+                    <button>Download PDF</button>
+                </div>
+            </section>
+            <header >
+                <div>
+                    <h1>Ties Van de Pol</h1>
+                    <i>frontend developer, musician</i>
+                </div>
+                <div>
+                    <p>
+                    tiesvdp@gmail.com<br>
+                    www.tiesvdp.be<br>
+                    +32 496 87 86 65
+                </p>
+                </div>
+            </header>
+            <section id="text1">
+                <h2>About me</h2>
+                <p>As an aspiring frontend developer and current student, I'm fueled by a profound passion for technology and a deep love for music. While I'm still on my educational journey, my focus is on honing my skills in HTML, CSS, JavaScript, and frontend development.</p>
+                <hr class="hrBig">
+                <h2>Experience</h2>
+                <div class="flexcontainer">
+                    <div class="experience-container-date">
+                        <p><i>2016-2023</i>Several student jobs<hr></p>
+                        <p><i>2019-2021</i>Scout Leader</p>
+                        <p><i>2021-2023</i>Scout Group Supervisor</p><hr>
+                        <p><i>2020-2023</i>Member of Youth center: audio tech</p>
+                    </div>
+                    <div class="experience-container-text">
+                        <p><em>As a dedicated student, I've spent five years as a Scout Leader, refining leadership, teamwork, and problem-solving skills. Three years of active engagement at a local youth center deepened my understanding of youth challenges during the transition to adulthood. These experiences have enriched my personal growth.</em></p>
+                    </div>
+                </div>
+                <h2>Technical</h2>
+                <div class="flexcontainer">
+                    <div class="technical-container-dev">
+                        <div>
+                            <table>
+                                <legend><h3>Dev</h3></legend>
+                                <tr>
+                                    <td><li>HTML</li></td>
+                                    <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i></td>
+                                    <td><li>C#</li></td>
+                                    <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><li>CSS</li></td>
+                                    <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"><i class="fa-solid fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i></td>
+                                    <td><li>SQL</li></td>
+                                    <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"><i class="fa-solid fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><li>JS</li></td>
+                                    <td><i class="fa-solid fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i></td>
+                                    <td><li>Git</li></td>
+                                    <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="technical-container-music">
+                        <table>
+                            <legend><h3>Music</h3></legend>
+                            <tr>
+                                <td><li>Logic</li></td>
+                                <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i></td>
+                                <td><li>IO</li></td>
+                                <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"><i class="fa-regular fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i></i></td>
+                            </tr>
+                            <tr>
+                                <td><li>Mainstage</li></td>
+                                <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i></td>
+                                <td><li>MIDI</li></td>
+                                <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i></td>
+                            </tr>
+                            <tr>
+                                <td><li>Ableton</li></td>
+                                <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="technical-container-other">
+                        <table>
+                            <legend><h3>Other</h3></legend>
+                            <tr>
+                                <td><li>Canva</li></td>
+                                <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"><i class="fa-solid fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i></td>
+                                <td><li>Word</li></td>
+                                <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i></td>
+                            </tr>
+                            <tr>
+                                <td><li>Vegas Pro</li></td>
+                                <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"><i class="fa-solid fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i></td>
+                                <td><li>Excel</li></td>
+                                <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"><i class="fa-solid fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i></td>
+                            </tr>
+                            <tr>
+                                <td><li>Windows</li></td>
+                                <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i></td>
+                                <td><li>General tasking</li></td>
+                                <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div> <!--Technical + table-->
+            </section>
+            <section id="extra1">
+                <h2>Languages</h2>
+                <div class="flexcontainer">
+                    <div class="language-container">
+                        <table>
+                            <tr>
+                                <td><li>Dutch</li></td>
+                                <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i></td>
+                                <td><li>French</li></td>
+                                <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i></td>  
+                            </tr>
+                            <tr>
+                                <td><li>English</li></td>
+                                <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i></td>
+                                <td><li>German</li></td>
+                                <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="extra2">
+                <h2>Notable competencies </h2>
+                <div class="flexcontainer">
+                    <div class="competencies-container">
+                        <table>
+                            <tr>
+                                <td><li>Creativity</li></td>
+                                <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i></td>
+                                <td>Adaptability</td>
+                                <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i></td>
+                            </tr>
+                            <tr>
+                                <td><li>Problem solving</li></td>
+                                <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i></td>
+                                <td>Communication</td>
+                                <td><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-solid fa-square techIcon"></i><i class="fa-regular fa-square techIcon"></i></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
-
-
-
-
-
-
-
 </body>
 </html>

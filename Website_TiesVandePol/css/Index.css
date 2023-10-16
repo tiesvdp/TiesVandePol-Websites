@@ -199,7 +199,13 @@ hr {
 #lightBlue {color: var(--lichtBlauw);}
 #gray {color: var(--grijs);}
 
+li {
+    list-style-type: none;
+}
 
+i {
+    width: 40px;
+}
 
 /* background information */
 .backgroundIndex,
@@ -255,13 +261,13 @@ hr {
 a:link {
     color: var(--white);
     background-color: transparent;
-    text-decoration: underline;
+    text-decoration: none;
 }
   
 a:visited {
     color: var(--white);
     background-color: transparent;
-    text-decoration: underline;
+    text-decoration: none;
 }
   
 a:hover {
