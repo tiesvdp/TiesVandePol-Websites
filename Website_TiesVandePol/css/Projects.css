@@ -32,10 +32,10 @@ html {
 /* Layout */
 .temp-container {
     width: 100%;
-    height: 30vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding-top: 300px;
 }
 
 /* Background Styles */
