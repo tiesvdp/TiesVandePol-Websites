@@ -1,3 +1,4 @@
+/* Variables */
 :root {
     --zwart: #0E0F0A;
     --blauw: #283544;
@@ -7,6 +8,7 @@
     --lichtBlauw: #447fad;
 }
 
+/* Global Styles */
 html {
     scroll-behavior: smooth;
 }
@@ -18,9 +20,6 @@ html {
     font-family: 'Prompt', sans-serif;
 }
 
-body {
-    overflow: overlay;
-}
 
 h1 {
     font-size: 2em;
@@ -39,7 +38,13 @@ p {
     padding-bottom: 15px;
 }
 
-.Title {
+hr {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Typography, text styling, text layout */
+.title {
     margin-left: 60px;
     margin-top: 30px;
     font-size: 3em;
@@ -47,7 +52,16 @@ p {
     display: inline-block;
 }
 
-.about1 {
+.thin {
+    font-size: 1.2em;
+    margin: 0;
+    height: fit-content;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+
+/* Layout and Positioning */
+.about1, .about2 {
     margin-top: 50px;
     margin-bottom: 100px;
     margin-left: auto;
@@ -57,79 +71,22 @@ p {
     border-radius: 10px;
     width: 1600px;
     text-align: justify;
+    overflow: hidden;
 }
 
-.about1Text {
+.about1Text, .about2Text {
     padding-left: 60px;
     backdrop-filter: invert(10%) contrast(0.8) brightness(0.3) blur(1px);  
 }
 
-.about2 {
-    margin-bottom: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    border: solid 5px var(--wit);
-    border-radius: 10px;
-    width: 1600px;
-    text-align: justify;
-}
-
-.about2Text {
-    border: 1px green solid;
-    padding-left: 60px;
-    backdrop-filter: invert(10%) contrast(0.8) brightness(0.3) blur(1px);  
-    width: 100%; 
-}
-
-hr {
-    margin-bottom: 20px;
-    width: 100%;
-}
-
-.CV-container {
-    height: 100%;
-    width: 100%;
-    background-color: var(--zwart);
-}
-
-.button a,
-.button a:link,
-.button a:visited,
-.button a:active {
-    color: white;
-    text-decoration: none;
-}
-
-.button a:hover {
-    color: var(--grijs);
-}
-
-.picMainIndex {
-    margin-left: 60px;
-    margin-right: 60px;
-    display: flex;
-    height: 312px;
-    width: 448px;
-}
-
-.picKaderIndex {
-    position: absolute;
-    margin-left: 60px;
-    margin-right: 60px;
-    bottom: 45px;
-    right: 661px;
-    height: 351px;
-    width: 490px;
-}
-
+/* Images */
 .picAbout1 {
     position: relative;
     float: right;
-    height: 460px;
-    padding-bottom: 0px;
-    margin-right: 0px;
-    padding-right: 0px;
+    max-height: 460px;
+    padding-bottom: 0;
+    margin-right: 0;
+    padding-right: 0;
     border-left: white 5px solid;
 }
 
@@ -137,83 +94,37 @@ hr {
     position: relative;
     float: left;
     max-height: 400px;
-    margin-left: 0px;
-    padding-left: 0px;
+    margin-left: 0;
+    padding-left: 0;
     border-right: white 5px solid;
 }
 
 .picAbout3 {
     position: relative;
     float: right;
-    height: 400px;
-    padding-bottom: 0px;
-    margin-right: 0px;
-    padding-right: 0px;
+    max-height: 370px;
+    padding-bottom: 0;
+    margin-right: 0;
+    padding-right: 0;
     border-left: white 5px solid;
 }
 
-.thin {
-    font-size: 1.2em;
-    margin: 0px 0px 0px 0px;
-    height: fit-content;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: normal;
-}
-
-.big{max-height: 80px; font-size: 4em;}
-.right{float: right;}
-.pad50{padding: 50px;}
-.padTop30 {padding-top: 30px;}
-.padTop10 {padding-top: 10px;}
-.padTop50 {padding-top: 50px;}
-.flex{display: flex;}
-
-#pink {color: var(--roos);}
-#lightBlue {color: var(--lichtBlauw);}
-#gray {color: var(--grijs);}
-
-
-
-/* background information */
-.backgroundIndex,
-.backgroundContact {
-    background-image: url("../IMG/Background-reduced.jpg");
-    background-color: #0e0f0a71;
-    background-position: 0% 40%;
-    background-size: cover;
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    color: var(--wit);
-}
-
+/* Background Styles */
 .backgroundAbout {
-    background-image: url("../IMG/Background-reduced.jpg");
+    background-image: url("../img/Background-reduced.jpg");
     background-color: #0e0f0a71;
-    background-position: absolute;
-    background-size: fixed;
     background-attachment: scroll;
     background-repeat: no-repeat;
     color: var(--wit);
 }
 
-.backgroundCV {
-    background-image: url("../IMG/Background-reduced.jpg");
-    background-color: #0e0f0a71;
-    background-position: absolute;
-    background-size: cover;
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    color: var(--wit);
-}
-
-
-/* scrollbar */ 
+/* Scrollbar Styles */
 ::-webkit-scrollbar {
     width: 10px;
     background: transparent;
 }
 
- ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: var(--wit);
     border: 1px solid var(--grijs);
     border-radius: 10px;
@@ -223,32 +134,22 @@ hr {
     background-color: var(--zwart);
 }
 
+/* Link Styles */
+a:link, a:visited {
+    color: var(--lichtBlauw);
+    background-color: transparent;
+    text-decoration: none;
+}
 
-/* link styles */
-a:link {
-    color: var(--white);
-    background-color: transparent;
-    text-decoration: underline;
-}
-  
-a:visited {
-    color: var(--white);
-    background-color: transparent;
-    text-decoration: underline;
-}
-  
 a:hover {
     color: var(--roos);
     background-color: transparent;
     text-decoration: solid underline;
 }
 
-
-
-
-/* nav-bar */
+/* Navigation Bar */
 .nav-bar {
-    position: absolute; /*or fixed? both are cool*/
+    position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -263,41 +164,20 @@ a:hover {
     border-radius: 1px;
     border: 0px solid var(--wit);
 }
+
 .nav-bar a {
-    
     text-decoration: none;
     color: var(--wit);
     margin: 0 20px;
     font-size: 1.2em;
-    color: var(--wit);
 }
+
 .nav-bar a:hover {
     text-decoration: wavy;
     color: var(--grijs);
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-
-
-
-/* Intro and Transition */
-.intro {
-    position: fixed;
-    z-index: 2;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #0e0f0a;
-    backdrop-filter: invert(5%) blur(5px);
-    transition: 1s;
-}
-
+/* Transition Styles */
 .transition {
     position: fixed;
     z-index: 2;
@@ -305,7 +185,7 @@ a:hover {
     top: 0;
     width: 100%;
     height: 100vh;
-    background-image: url(../IMG/background-vertical.png);
+    background-image: url(../img/background-vertical.png);
     background-color: #0e0f0a71;
     background-position: 0% 40%;
     background-size: cover;
@@ -313,14 +193,6 @@ a:hover {
     background-repeat: no-repeat;
     backdrop-filter: invert(5%) blur(5px);
     transition: 0.5s;
-}
-
-.logo-header {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--wit);
 }
 
 .transition-header { 
@@ -331,24 +203,11 @@ a:hover {
     color: var(--wit);
 }
 
-.logo {
-    position: relative;
-    display: inline-block;
-    bottom: -20px;
-    opacity: 0;
-}
-
 .logoTransition {
     position: relative;
     display: inline-block;
     bottom: -20px;
     opacity: 0;
-}
-
-.logo.active {
-    bottom: 0;
-    opacity: 1;
-    transition: ease-in-out 0.5s;
 }
 
 .logoTransition.active {
@@ -357,15 +216,8 @@ a:hover {
     transition: ease-in-out 0.3s;
 }
 
-.logo.fade {
-    bottom: 150px;
-    opacity: 0;
-    transition: ease-in-out 0.5s;
-}
-
 .logoTransition.fade {
     bottom: 150px;
     opacity: 0;
     transition: ease-in-out 0.3s;
 }
-

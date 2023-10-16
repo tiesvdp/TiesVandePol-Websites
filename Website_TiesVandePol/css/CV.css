@@ -1,3 +1,4 @@
+/* Variables */
 :root {
     --zwart: #0E0F0A;
     --blauw: #283544;
@@ -7,6 +8,7 @@
     --lichtBlauw: #447fad;
 }
 
+/* Global Styles */
 html {
     scroll-behavior: smooth;
 }
@@ -18,14 +20,11 @@ html {
     font-family: 'Prompt', sans-serif;
 }
 
-body {
-    overflow: overlay;
-}
-
 i {
     display: inline-block;
     width: 120px;
 }
+
 header > div > i {
     width: auto;
 }
@@ -35,7 +34,24 @@ h2 {
     margin-bottom: 4px;
 }
 
-.Title {
+hr {
+    width: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    border: 1px solid #0e0f0a48;
+}
+
+/* Text Styles, hr change */
+.thin {
+    font-size: 1.2em;
+    margin: 0px 0px 0px 0px;
+    height: fit-content;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+
+.title {
     margin-left: 60px;
     margin-top: 30px;
     font-size: 3em;
@@ -43,7 +59,16 @@ h2 {
     display: inline-block;
 }
 
-.CV-container {
+.hrBig {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--zwart);
+    width: 100%;
+    margin-left: 0px;
+}
+
+/* Layout */
+.cv-container {
     margin-top: 50px;
     margin-bottom: 100px;
     margin-left: auto;
@@ -54,7 +79,7 @@ h2 {
     width: 85%;
     height: max-content;
     text-align: left;
-    overflow: hidden;  
+    overflow: hidden;
 }
 
 .foto-container {
@@ -65,7 +90,7 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
-    background-image: url(../IMG/ik.JPG);
+    background-image: url(../img/ik.jpg);
     background-size: cover;
     background-position: center center;
     border: 3px var(--wit) solid;
@@ -78,7 +103,7 @@ h2 {
     width: 100%;
 }
 
-.flexcontainer {
+.flex-container {
     margin-top: 10px;
     display: flex;
     border: 3px solid var(--blauw);
@@ -91,6 +116,7 @@ h2 {
     background-color: #5d95c0;
     padding: 10px;
 }
+
 .experience-container-text {
     width: 55%;
     background-color: #8bb6d6;
@@ -122,13 +148,7 @@ h2 {
     padding-left: 20px;
 }
 
-.language-container {
-    background-color: #8bb6d6;
-    width: 100%;
-    padding: 10px;
-    padding-left: 20px;
-}
-
+.language-container,
 .competencies-container {
     background-color: #8bb6d6;
     width: 100%;
@@ -136,8 +156,13 @@ h2 {
     padding-left: 20px;
 }
 
+/* Tables */
 table {
     width: 100%;
+}
+
+caption {
+    text-align: left;
 }
 
 td {
@@ -148,9 +173,7 @@ td {
     width: max-content;
 }
 
-li {
-    list-style: none;
-}
+/* Grid Layout & Style */
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -177,7 +200,6 @@ header > div {
     padding: 10px 40px 10px 40px;
     text-align: left;
     width: 50%;
-
 }
 
 header > div > p {
@@ -186,11 +208,9 @@ header > div > p {
     color: var(--blauw);
 }
 
-
 #text1 {
     grid-column-start: 2;
     grid-column-end: 4;
-    
 }
 
 #left {
@@ -212,62 +232,23 @@ header > div > p {
     padding-bottom: 30px;
 }
 
-.thin {
-    font-size: 1.2em;
-    margin: 0px 0px 0px 0px;
-    height: fit-content;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: normal;
-}
-
-hr {
-    width: 50px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    border: 1px solid #0e0f0a48;
-}
-.hrBig {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border: 1px solid var(--zwart);
-    width: 100%;
-    margin-left: 0px;
-}
-
-
-.big{max-height: 80px; font-size: 4em;}
-.right{float: right;}
-.pad50{padding: 50px;}
-.padTop30 {padding-top: 30px;}
-.padTop10 {padding-top: 10px;}
-.padTop50 {padding-top: 50px;}
-.flex{display: flex;}
-
-#pink {color: var(--roos);}
-#lightBlue {color: var(--lichtBlauw);}
-#gray {color: var(--grijs);}
-
-
-
-/* background information */
+/* Background Styles */
 .backgroundCV {
-    background-image: url("../IMG/Background-reduced.jpg");
+    background-image: url("../img/background-reduced.jpg");
     background-color: #0e0f0a71;
-    background-position: absolute;
     background-size: cover;
     background-attachment: scroll;
     background-repeat: no-repeat;
     color: var(--wit);
 }
 
-/* scrollbar */ 
+/* Scrollbar Styles */
 ::-webkit-scrollbar {
     width: 10px;
     background: transparent;
 }
 
- ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: var(--wit);
     border: 1px solid var(--grijs);
     border-radius: 10px;
@@ -277,9 +258,9 @@ hr {
     background-color: var(--zwart);
 }
 
-/* nav-bar */
+/* Navigation Bar */
 .nav-bar {
-    position: absolute; /*or fixed? both are cool*/
+    position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -294,17 +275,16 @@ hr {
     border-radius: 1px;
     border: 0px solid var(--wit);
 }
+
 .nav-bar a {
-    
     text-decoration: none;
     color: var(--wit);
     margin: 0 20px;
     font-size: 1.2em;
     color: var(--wit);
 }
+
 .nav-bar a:hover {
     text-decoration: wavy;
     color: var(--grijs);
 }
-
-

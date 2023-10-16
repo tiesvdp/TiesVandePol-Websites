@@ -1,3 +1,4 @@
+/* Variables */
 :root {
     --zwart: #0E0F0A;
     --blauw: #283544;
@@ -7,6 +8,7 @@
     --lichtBlauw: #447fad;
 }
 
+/* Global Styles */
 html {
     scroll-behavior: smooth;
 }
@@ -18,24 +20,8 @@ html {
     font-family: 'Prompt', sans-serif;
 }
 
-body {
-    overflow: overlay;
-}
-
-h1 {
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 2px;
-    margin-top: 30px;
-    width: max-content;
-}
-
-p {
-    padding-right: 30px;
-    padding-bottom: 15px;
-}
-
-.Title {
+/* Title */
+.title {
     margin-left: 60px;
     margin-top: 30px;
     font-size: 3em;
@@ -43,6 +29,17 @@ p {
     display: inline-block;
 }
 
+/* Text Styles */
+.thin {
+    font-size: 1.2em;
+    margin: 0;
+    height: fit-content;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    color: var(--wit);
+}
+
+/* Layout */
 .contact-container {
     display: flex;
     margin-top: 50px;
@@ -55,9 +52,10 @@ p {
     width: max-content;
     height: max-content;
     text-align: left;
-    backdrop-filter: invert(10%) contrast(0.8) brightness(0.3) blur(1px);  
+    backdrop-filter: invert(10%) contrast(0.8) brightness(0.3) blur(1px);
 }
 
+/* Labels and Inputs */
 label {
     box-sizing: border-box;
     display: block;
@@ -90,6 +88,7 @@ label {
     padding: 10px;
 }
 
+/* Submit Button */
 #submit {
     display: block;
     width: 300px;
@@ -109,19 +108,9 @@ label {
     margin-bottom: -2px;
 }
 
-
-.thin {
-    font-size: 1.2em;
-    margin: 0px 0px 0px 0px;
-    height: fit-content;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: normal;
-    color: var(--wit);
-}
-
-/* background information */
+/* Background Information */
 .backgroundContact {
-    background-image: url("../IMG/Background-reduced.jpg");
+    background-image: url("../img/background-reduced.jpg");
     background-color: #0e0f0a71;
     background-position: 0% 40%;
     background-size: cover;
@@ -130,13 +119,13 @@ label {
     color: var(--wit);
 }
 
-/* scrollbar */ 
+/* Scrollbar Styles */
 ::-webkit-scrollbar {
     width: 10px;
     background: transparent;
 }
 
- ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: var(--wit);
     border: 1px solid var(--grijs);
     border-radius: 10px;
@@ -146,7 +135,7 @@ label {
     background-color: var(--zwart);
 }
 
-/* nav-bar */
+/* Navigation Bar */
 .nav-bar {
     position: absolute; /*or fixed? both are cool*/
     top: 0;
@@ -163,17 +152,16 @@ label {
     border-radius: 1px;
     border: 0px solid var(--wit);
 }
+
 .nav-bar a {
-    
     text-decoration: none;
     color: var(--wit);
     margin: 0 20px;
     font-size: 1.2em;
     color: var(--wit);
 }
+
 .nav-bar a:hover {
     text-decoration: wavy;
     color: var(--grijs);
 }
-
-
