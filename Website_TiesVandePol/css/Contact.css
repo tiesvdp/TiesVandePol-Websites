@@ -69,7 +69,7 @@ p {
     padding-left: 40px; 
 }
 
-.CV-container {
+.contact-container {
     display: flex;
     margin-top: 50px;
     margin-bottom: 100px;
@@ -103,6 +103,11 @@ label {
     outline: 2px solid transparent;
 }
 
+#name:hover, #email:hover, #subject:hover {
+    border-bottom: 3px solid var(--wit);
+    margin-bottom: -1px;
+}
+
 #area {
     height: 200px;
     max-height: fit-content;
@@ -123,18 +128,13 @@ label {
     background-color: transparent;
 }
 
-
-.button a,
-.button a:link,
-.button a:visited,
-.button a:active {
-    color: white;
-    text-decoration: none;
+#submit:hover {
+    background-color: var(--zwart);
+    font-weight: bold;
+    border: 3px var(--wit) solid;
+    margin-bottom: -2px;
 }
 
-.button a:hover {
-    color: var(--grijs);
-}
 
 .thin {
     font-size: 1.2em;

@@ -28,7 +28,7 @@
 
     <div class="Title"><p>C O N T A C T</p></div>
 
-    <div class="CV-container">
+    <div class="contact-container">
         <form method="get" action="mailto:tiesvdp@gmail.com">
             <div>
                 <label for="name">Name</label>
@@ -40,19 +40,23 @@
                 <label for="email">E-mail</label>
             </div>
             <div>
-                <input class="thin" type="text" name="email" id="email" placeholder="@something..." required>
+                <input class="thin" type="text" name="email" id="email" placeholder="@ something..." required>
             </div>
             <div>
                 <label for="subject">Subject</label></div>
             <div>
-                <input class="thin" type="text" name="subject" id="subject" placeholder="About..." required>
+                <input class="thin" type="text" name="subject" id="subject" placeholder="Bonjour!" required>
             </div>
             <div>
                 <label for="area">Question</label>
             </div>
             <div>
-                <input class="thin" type="textarea" name="area" id="area" placeholder="Question..." required>
+                <textarea class="thin" name="area" id="area" placeholder="Question..."></textarea>
             </div>
+            <div>
+                <input class="thin" type="submit" name="submit" id="submit" value="Submit">
+            </div>
+
             <!--<div>   
                 <Fieldset>
                     <Legend>Category:</Legend>
@@ -62,9 +66,6 @@
                     <input type="radio" name="fieldset" id="development" value="development" required>
                 </Fieldset>
             </div>-->
-            <div>
-                <input class="thin" type="submit" name="submit" id="submit" value="Submit">
-            </div>
         </form> 
     </div>
 
