@@ -1,0 +1,60 @@
+* {
+  /* Alle elementen krijg 0 margin */
+  margin: 0px;
+  box-sizing: border-box;
+  font-family:Arial, Helvetica, sans-serif;
+  --blauw: #008693;
+  --oranje: #f04c25;
+}
+
+/* Responsive maken */
+@media screen and (max-width: 800px) {
+  .flexbox {
+    /* Stack flexbox in een kolom ipv in een rij op screens die kleiner zijn dan 800px */
+    flex-direction: column;
+  }
+}
+
+body {
+  background-color: #e6e6e6;
+}
+.container {
+  width: 70%;
+  height: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: solid 1px red;
+  border-radius: 20px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.nav-bar {
+  display: flex;
+  background-color: var(--blauw);
+  border-bottom: var(--oranje) solid 3px;
+}
+
+.nav-bar > div, a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+
+a {
+  font-weight: normal;
+  font-size: 1.3em;
+  color: white;
+  text-decoration: none;
+}
+
+a:active, a:hover {
+  background-color: var(--oranje);
+}
