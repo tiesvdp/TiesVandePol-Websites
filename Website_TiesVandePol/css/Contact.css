@@ -48,7 +48,7 @@ html {
     margin-right: auto;
     padding: 15px 50px 30px 50px;
     border: solid 5px var(--wit);
-    border-radius: 10px;
+    border-radius: 30px;
     width: max-content;
     height: max-content;
     text-align: left;

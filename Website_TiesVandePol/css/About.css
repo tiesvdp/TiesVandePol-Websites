@@ -20,7 +20,6 @@ html {
     font-family: 'Prompt', sans-serif;
 }
 
-
 h1 {
     font-size: 2em;
     font-weight: bold;
@@ -49,7 +48,6 @@ hr {
     margin-top: 30px;
     font-size: 3em;
     font-weight: bold;
-    display: inline-block;
 }
 
 .thin {
@@ -62,13 +60,13 @@ hr {
 
 /* Layout and Positioning */
 .about1, .about2 {
-    margin-top: 50px;
+    margin-top: 35px;
     margin-bottom: 100px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     border: solid 5px var(--wit);
-    border-radius: 10px;
+    border-radius: 30px;
     width: 1600px;
     text-align: justify;
     overflow: hidden;
@@ -76,7 +74,7 @@ hr {
 
 .about1Text, .about2Text {
     padding-left: 60px;
-    backdrop-filter: invert(10%) contrast(0.8) brightness(0.3) blur(1px);  
+    backdrop-filter: invert(10%) contrast(0.8) brightness(0.3) blur(1px);
 }
 
 /* Images */
@@ -195,7 +193,7 @@ a:hover {
     transition: 0.5s;
 }
 
-.transition-header { 
+.transition-header {
     position: absolute;
     top: 40%;
     left: 50%;

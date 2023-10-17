@@ -99,13 +99,12 @@ ul {
 }
 
 .version {
-    position: absolute;
+    position: fixed;
+    height: max-content;
+    width: max-content;
     right: 0;
-    bottom: 0;
-    padding: 10px;
-    font-size: large;
-    color: #f4faff91;
 }
+
 .pad50 {
     padding: 50px;
 }
@@ -185,12 +184,10 @@ i {
     background-color: var(--wit);
     border: 1px solid var(--grijs);
     border-radius: 10px;
-    z-index: -1;
 }
 
 ::-webkit-scrollbar-track {
     background-color: var(--zwart);
-    z-index: -1;
 }
 
 /* Link Styles */
@@ -221,6 +218,7 @@ a:hover {
     background-size: cover;
     padding: 10px;
     margin-top: 32px;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
