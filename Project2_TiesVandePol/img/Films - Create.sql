@@ -1,0 +1,406 @@
+DROP TABLE IF EXISTS Film.filmgenre;
+DROP TABLE IF EXISTS Film.genre;
+DROP TABLE IF EXISTS Film.medewerker;
+DROP TABLE IF EXISTS Film.acteur;
+DROP TABLE IF EXISTS Film.film;
+GO
+DROP SCHEMA IF EXISTS Film;
+GO
+CREATE SCHEMA Film;
+GO
+CREATE TABLE Film.Film
+(
+    id           int IDENTITY (1,1),
+    imdbnr       varchar(20)  NOT NULL,
+    titel        varchar(100) NOT NULL,
+    jaar         int,
+    releasedatum date,
+    land         varchar(100),
+    CONSTRAINT PK_Film PRIMARY KEY (id)
+);
+GO
+CREATE TABLE Film.Acteur
+(
+    id           int IDENTITY (1,1),
+    imdbNr         varchar(20)  NOT NULL,
+    naam           varchar(100) NOT NULL,
+    geboortedatum  date,
+    geboorteplaats varchar(100),
+    geslacht       char(1),
+    CONSTRAINT PK_Acteur PRIMARY KEY (id)
+);
+GO
+CREATE TABLE Film.Medewerker
+(
+    id            int IDENTITY (1,1),
+    acteurId      int,
+    filmId       int,
+    characterNr   varchar(20),
+    characterNaam varchar(100),
+    opmerking     varchar(100),
+    CONSTRAINT PK_Medewerker PRIMARY KEY (id)
+);
+GO
+
+CREATE TABLE Film.Genre
+(
+    id   int IDENTITY (1,1),
+    naam varchar(50) NOT NULL,
+    CONSTRAINT PK_Genre PRIMARY KEY (id)
+);
+GO
+CREATE TABLE Film.Filmgenre
+(
+    id      int IDENTITY (1,1),
+    genreId int NOT NULL,
+    filmId  int NOT NULL,
+    CONSTRAINT PK_Filmgenre PRIMARY KEY (id)
+);
+GO
+-- -----------------------------------------------------
+-- Table `filmgenre`
+-- -----------------------------------------------------
+ALTER TABLE Film.filmgenre
+    ADD CONSTRAINT fk_filmgenre_genre
+        FOREIGN KEY (genreId)
+            REFERENCES Film.genre (id);
+ALTER TABLE Film.filmgenre
+    ADD CONSTRAINT fk_filmgenre_film
+        FOREIGN KEY (filmId)
+            REFERENCES Film.film (id);
+GO
+-- -----------------------------------------------------
+-- Table `Medewerker`
+-- -----------------------------------------------------
+ALTER TABLE Film.Medewerker
+    ADD CONSTRAINT fk_Medewerker_acteur
+        FOREIGN KEY (acteurId)
+            REFERENCES Film.acteur (id);
+ALTER TABLE Film.Medewerker
+    ADD CONSTRAINT fk_Medewerker_film
+        FOREIGN KEY (filmId)
+            REFERENCES Film.film (id);
+GO
+
+INSERT INTO Film.film(imdbnr, titel, jaar, releasedatum, land)
+VALUES ('tt0499603', '10 Items or Less', 2006, null, 'USA'),
+       ('tt0245674', 'Thir13en Ghosts', 2001, '2002-05-08', 'USA, Canada'),
+       ('tt1190080', '2012', 2009, '2009-11-11', 'USA'),
+       ('tt0478087', '21', 2008, '2008-04-16', 'USA'),
+       ('tt0463854', '28 Weeks Later', 2007, '2007-09-19', 'UK, Spain'),
+       ('tt0416449', '300', 2006, '2007-03-21', 'USA'),
+       ('tt0283832', '8 femmes', 2002, '2005-02-13', 'France, Italy'),
+       ('tt0443649', '10,000 BC', 2008, '2008-03-12', 'USA, South Africa'),
+       ('tt0103594', '1492: Conquest of Paradise', 1992, '1992-10-09', 'France, Spain'),
+       ('tt0087803', 'Nineteen Eighty-Four', 1984, '1984-12-14', 'UK'),
+       ('tt0988595', '27 Dresses', 2008, '2008-04-05', 'USA'),
+       ('tt0191754', '28 Days', 2000, '2000-06-28', 'USA'),
+       ('tt0381849', '3:10 to Yuma', 2007, '2008-05-28', 'USA'),
+       ('tt0343660', '50 First Dates', 2004, '2004-06-30', 'USA'),
+       ('tt1022603', '(500) Days of Summer', 2009, '2009-11-04', 'USA'),
+       ('tt0472033', '9', 2014, '2009-09-16', 'USA'),
+       ('tt0411705', '9 Songs', 2004, '2005-03-23', 'UK'),
+       ('tt0841044', '2 Days in Paris', 2007, '2007-08-08', 'France, Germany'),
+       ('tt0115438', '2 Days in the Valley', 1996, '1997-04-16', 'USA'),
+       ('tt0050086', '3:10 to Yuma', 1957, '1957-08-07', 'USA'),
+       ('tt0411061', '88 Minutes', 2007, '2008-04-18', 'Germany, USA, Canada'),
+       ('tt0109831', 'Four Weddings and a Funeral', 1994, null, 'UK'),
+       ('tt0139809', 'The Thirteenth Floor', 1999, '1999-09-01', 'Germany, USA'),
+       ('tt0227984', 'The 51st State', 2001, '2002-09-11', 'UK, Canada'),
+       ('tt0328538', 'Thirteen', 2003, '2004-01-28', 'USA'),
+       ('tt0109040', 'Ace Ventura: Pet Detective', 1994, '1994-02-04', 'USA, Germany'),
+       ('tt0346491', 'Alexander', 2004, '2005-01-24', 'Germany, USA, Netherlands, France, UK, Italy'),
+       ('tt0078748', 'Alien', 1979, '1979-09-04', 'USA, UK'),
+       ('tt0259822', '.45', 2006, '2006-11-30', 'USA'),
+       ('tt0492931', 'The 11th Hour', 2007, '2007-10-10', 'USA'),
+       ('tt0103644', 'Aliens', 1992, '1992-08-27', 'USA'),
+       ('tt0020629', 'All Quiet on the Western Front', 1930, '1930-08-24', 'USA'),
+       ('tt0265029', 'Americas Sweethearts', 200, '2001-10-31', 'USA'),
+       ('tt0169547', 'American Beauty', 1999, '2000-02-02', 'USA'),
+       ('tt0765429', 'American Gangster', 2007, '2007-11-14', 'USA'),
+       ('tt0144084', 'American Psycho', 2000, '2000-09-20', 'USA'),
+       ('tt0245712', 'Amores perros', 2000, '2000-12-27', 'Mexico'),
+       ('tt0473753', 'Angel-A', 2005, '2005-12-28', 'France'),
+       ('tt0405422', 'The 40 Year Old Virgin', 2005, '2005-11-02', 'USA'),
+       ('tt0948530', 'Aanrijding in Moscou', 2008, '2008-01-30', 'Belgium'),
+       ('tt0257360', 'About Schmidt', 2002, '2003-04-02', 'USA'),
+       ('tt0454776', 'Amazing Grace', 2006, '2007-02-23', 'UK, USA'),
+       ('tt0109127', 'Angels in the Outfield', 1994, '1994-07-15', 'USA');
+GO
+
+INSERT INTO Film.Genre(naam)
+VALUES ('Comedy'),
+       ('Drama'),
+       ('Romance'),
+       ('War'),
+       ('Animation'),
+       ('Action'),
+       ('Family'),
+       ('Crime'),
+       ('Thriller'),
+       ('Musical'),
+       ('Biography'),
+       ('Adventure'),
+       ('Fantasy'),
+       ('Mystery'),
+       ('Documentary'),
+       ('History'),
+       ('Sci-Fi'),
+       ('Short'),
+       ('Horror'),
+       ('Sport'),
+       ('Western'),
+       ('Music'),
+       ('Other');
+GO
+
+INSERT INTO Film.filmgenre(genreID, filmID)
+VALUES (2, 1),
+       (3, 2),
+       (5, 2),
+       (9, 3),
+       (1, 4),
+       (2, 4),
+       (3, 4),
+       (6, 5),
+       (9, 5),
+       (1, 6),
+       (2, 6),
+       (3, 6),
+       (9, 7),
+       (14, 7),
+       (19, 7),
+       (2, 8),
+       (6, 8),
+       (9, 8),
+       (12, 8),
+       (17, 8),
+       (2, 9),
+       (9, 10),
+       (19, 10),
+       (4, 11),
+       (6, 11),
+       (13, 11),
+       (1, 12),
+       (8, 12),
+       (10, 12),
+       (14, 12),
+       (2, 13),
+       (12, 13),
+       (13, 13),
+       (2, 14),
+       (11, 14),
+       (12, 14),
+       (16, 14),
+       (2, 15),
+       (3, 15),
+       (9, 15),
+       (17, 15),
+       (1, 16),
+       (3, 16),
+       (2, 17),
+       (2, 18),
+       (6, 18),
+       (8, 18),
+       (21, 18),
+       (1, 19),
+       (3, 19),
+       (1, 20),
+       (2, 20),
+       (3, 20),
+       (5, 21),
+       (9, 21),
+       (12, 21),
+       (13, 21),
+       (14, 21),
+       (17, 21),
+       (2, 22),
+       (3, 22),
+       (22, 22),
+       (1, 23),
+       (2, 23),
+       (3, 23),
+       (8, 24),
+       (9, 24),
+       (2, 25),
+       (6, 25),
+       (9, 25),
+       (12, 25),
+       (21, 25),
+       (2, 27),
+       (9, 27),
+       (14, 27),
+       (1, 28),
+       (2, 28),
+       (3, 28),
+       (3, 29),
+       (9, 29),
+       (13, 29),
+       (14, 29),
+       (17, 29),
+       (1, 30),
+       (6, 30),
+       (8, 30),
+       (2, 31),
+       (1, 32),
+       (6, 32),
+       (9, 32),
+       (14, 32),
+       (6, 33),
+       (9, 33),
+       (12, 33),
+       (17, 33),
+       (2, 34),
+       (3, 34),
+       (4, 34),
+       (6, 34),
+       (11, 34),
+       (12, 34),
+       (16, 34),
+       (9, 35),
+       (17, 35),
+       (19, 35),
+       (2, 36),
+       (8, 36),
+       (15, 37),
+       (6, 38),
+       (9, 38),
+       (17, 38),
+       (2, 39),
+       (4, 39),
+       (6, 39),
+       (16, 39),
+       (1, 40),
+       (3, 40),
+       (2, 41),
+       (2, 42),
+       (8, 42),
+       (2, 43),
+       (8, 43),
+       (9, 43);
+GO
+
+INSERT INTO Film.acteur(imdbNr, naam, geboortedatum, geboorteplaats, geslacht)
+VALUES ('nm0000151', 'Morgan Freeman', '1937-06-01', 'Memphis, Tennessee', 'M'),
+       ('nm0891895', 'Paz Vega', '1976-01-02', 'Seville, Andalucia, Spain', 'V'),
+       ('nm0005132', 'Heath Ledger', '1979-04-04', 'Perth, Western Australia, Australia', 'M'),
+       ('nm0005466', 'Julia Stiles', '1981-03-28', 'New York City, New York, USA', 'V'),
+       ('nm0330687', 'Joseph Gordon-Levitt', '1981-02-17', 'Los Angeles, California, USA', 'M'),
+       ('nm0646351', 'Larisa Oleynik', '1981-06-07', 'Santa Clara County, California, USA', 'V'),
+       ('nm0472710', 'David Krumholtz', '1978-05-15', 'Queens, New York City, New York, USA', 'M'),
+       ('nm0005080', 'Andrew Keegan', '1979-01-29', 'Los Angeles, California, USA', 'M'),
+       ('nm0006721', 'Susan May Pratt', '1974-02-08', 'Lansing, Michigan, USA', 'V'),
+       ('nm0005517', 'Gabrielle Union', '1972-10-29', 'Omaha, Nebraska, USA', 'V'),
+       ('nm0588777', 'Larry Miller', '1953-10-15', 'Valley Stream, Long Island, New York, USA', 'M'),
+       ('nm0593258', 'Daryl Mitchell', '1965-07-16', 'The Bronx, New York, USA', 'M'),
+       ('nm0005049', 'Allison Janney', '1959-11-19', 'Dayton, Ohio, USA', 'V'),
+       ('nm0500601', 'David Leisure', '1950-11-16', 'San Diego, California, USA', 'M'),
+       ('nm0413563', 'Greg Jackson', '1955-03-22', 'New Jersey, USA', 'M'),
+       ('nm0147472', 'Kyle Cease', '1977-09-19', 'Seattle, Washington, USA', 'M'),
+       ('nm0381906', 'Terence Heuston', null, null, 'M'),
+       ('nm0001724', 'Tony Shalhoub', '1953-10-09', 'Green Bay, Wisconsin, USA', 'M'),
+       ('nm0001110', 'Embeth Davidtz', '1965-08-11', 'Lafayette, Indiana, USA', 'V'),
+       ('nm0000498', 'Matthew Lillard', '1970-01-24', 'Lansing, Michigan, USA', 'M'),
+       ('nm0002436', 'Shannon Elizabeth', '1973-09-07', 'Houston, Texas, USA', 'V'),
+       ('nm0730809', 'Alec Roberts', null, 'Los Angeles, California, USA', 'M'),
+       ('nm0100068', 'JR Bourne', '1970-04-08', 'Toronto, Ontario, Canada', 'M'),
+       ('nm0226497', 'Rah Digga', '1972-12-18', 'Newark, New Jersey, USA', 'V'),
+       ('nm0000719', 'F. Murray Abraham', '1939-10-24', 'Pittsburgh, Pennsylvania, USA', 'M'),
+       ('nm0365755', 'Matthew Harrison', '1968-12-17', 'Montreal, Quebec, Canada', 'M'),
+       ('nm0750474', 'Jacob Rupp', null, null, 'M'),
+       ('nm0921738', 'Daniel Wesley', null, null, 'M'),
+       ('nm0000131', 'John Cusack', '1966-06-28', 'Evanston, Illinoi, USA', 'M'),
+       ('nm0001605', 'Amanda Peet', '1972-01-11', 'New York City, New York, USA', 'V'),
+       ('nm0252230', 'Chiwetel Ejiofor', '1974-07-10', 'Forest Gate, London, England, UK', 'M'),
+       ('nm0628601', 'Thandie Newton', '1972-11-06', 'London, England, UK', 'V'),
+       ('nm0001624', 'Oliver Platt', '1960-01-12', 'Windsor, Ontario, Canada', 'M'),
+       ('nm0565336', 'Thomas McCarthy', '1966-01-30', 'New Jersey, USA', 'M'),
+       ('nm0000437', 'Woody Harrelson', '1961-07-23', 'Midland, Texas, USA', 'M'),
+       ('nm0000418', 'Danny Glover', '1946-07-22', 'San Francisco, California, USA', 'M'),
+       ('nm0416699', 'Liam James', '1996-08-07', 'Canada', 'M'),
+       ('nm2079681', 'Morgan Lily', '2000-04-11', 'Santa Monica, California, USA', 'V'),
+       ('nm0121519', 'Zlatko Buric', '1953-05-13', 'Osijek, Croatia', 'M'),
+       ('nm0742389', 'Beatrice Rosen', '1977-11-29', 'New York City, New York, USA', 'V'),
+       ('nm3167226', 'Alexandre Haussmann', null, null, 'M'),
+       ('nm3167452', 'Philippe Haussmann', null, null, 'M'),
+       ('nm1053380', 'Johann Urb', '1977-01-24', 'Tallinn, Estonia', 'M'),
+       ('nm0836343', 'Jim Sturgess', '1978-05-16', 'England, UK', 'M'),
+       ('nm0000228', 'Kevin Spacey', '1959-07-26', 'South Orange, New Jersey, USA', 'M'),
+       ('nm0098378', 'Kate Bosworth', '1983-01-02', 'Los Angeles, California, USA', 'V'),
+       ('nm1683094', 'Aaron Yoo', '1979-05-12', 'New Jersey, USA', 'M'),
+       ('nm0487594', 'Liza Lapira', null, 'Queens, New York, USA', 'V'),
+       ('nm0686009', 'Jacob Pitts', null, null, 'M'),
+       ('nm0569079', 'Jack McGee', null, null, 'M');
+GO
+
+INSERT INTO Film.medewerker(acteurid, filmid, characterNr, characterNaam, opmerking)
+VALUES (1, 1, 'ch0026790', 'God', null),
+       (2, 1, 'ch0012091', 'Col. Abraham Curtis', null),
+       (3, 1, 'ch0014096', 'Hoke Colburn', null),
+       (4, 1, 'ch0000187', 'Lucius Fox', null),
+       (5, 2, 'ch0048696', 'Carter Chambers', null),
+       (6, 2, 'ch0008073', 'Sgt. Maj. John Rawlins', null),
+       (7, 3, 'ch0102477', 'Jack Doyle', null),
+       (8, 4, null, 'Narrator (voice: English version)', null),
+       (9, 4, 'ch0001387', 'Ellis Boyd', null),
+       (10, 5, 'ch0036874', 'Sloan', null),
+       (11, 5, 'ch0002285', 'Detective Lt. William Somerset', null),
+       (12, 6, 'ch0016696', 'Charles W. Grimes', null),
+       (13, 7, null, 'Charles Peterson', null),
+       (14, 7, 'ch0009825', 'Alex Cross', null),
+       (14, 6, 'ch0051431', 'Amparo', null),
+       (15, 8, null, 'Elena Morales', null),
+       (16, 8, 'ch0004049', 'Patrick Verona', null),
+       (16, 9, 'ch0042613', 'Jacob Grimm', null),
+       (17, 9, 'ch0031493', 'Dan', null),
+       (18, 9, 'ch0000180', 'Joker', null),
+       (19, 10, 'ch0096419', 'Robbie', null),
+       (20, 11, 'ch0010462', 'William Thatcher', null),
+       (21, 11, 'ch0006307', 'Gabriel Martin', null),
+       (22, 11, 'ch0004049', 'Patrick Verona', null),
+       (23, 12, 'ch0061054', 'Tony', null),
+       (24, 13, 'ch0004069', 'Kat Stratford', null),
+       (25, 13, 'ch0002112', 'Nicolette', null),
+       (26, 15, 'ch0002113', 'Nicky Parsons', null),
+       (27, 15, 'ch0002114', 'Nicky', null),
+       (28, 18, 'ch0014003', 'Joan Brandwyn', null),
+       (29, 18, 'ch0004069', 'Kat Stratford', null),
+       (25, 18, 'ch0228278', 'Lumen Ann Pierce', null),
+       (26, 19, 'ch0004056', 'Cameron James', null),
+       (27, 20, 'ch0126168', 'Tom Hansen', null),
+       (28, 20, 'ch0020105', 'Roger Bomman', null),
+       (29, 25, 'ch0154326', 'Rex Lewis', null),
+       (25, 25, null, 'Bar Patron (uncredited)', null),
+       (30, 26, 'ch0004056', 'Cameron James', null),
+       (31, 26, 'ch0157860', 'Arthur', null),
+       (32, 27, 'ch0243500', 'Adam', null),
+       (33, 28, 'ch0088956', 'Bianca Stratford', null),
+       (34, 28, 'ch0004068', 'Michael', null),
+       (35, 30, 'ch0105225', 'Schwartzberg', null),
+       (27, 30, 'ch0003811', 'Mr. Universe', null),
+       (36, 32, 'ch0004068', 'Michael', null),
+       (37, 32, 'ch0018622', 'Paul Sobriki', null),
+       (38, 32, 'ch0256655', 'Kent', null),
+       (1, 33, 'ch0004077', 'Joey Donner', null),
+       (39, 33, 'ch0131895', 'Older Boy', null),
+       (40, 34, 'ch0004077', 'Joey Donner', null),
+       (41, 35, 'ch0004078', 'Mandella', null),
+       (3, 35, 'ch0004078', 'Mandella', null),
+       (11, 35, 'ch0004072', 'Chastity', null),
+       (21, 35, 'ch0004072', 'Chastity', null),
+       (42, 36, null, 'Katie', null),
+       (43, 36, 'ch0004083', 'Walter Stratford', null),
+       (44, 37, 'ch0041396', 'Fred Nickle', null),
+       (8, 37, null, 'Himself', null),
+       (45, 38, 'ch0037662', 'Buzzwell', null),
+       (5, 38, 'ch0016831', 'Wally Fenton', null),
+       (8, 38, 'ch0004083', 'Walter Stratford', null),
+       (46, 39, 'ch0238153', 'Marcel', null),
+       (4, 40, 'ch0004084', 'Mr. Morgan', null),
+       (1, 40, null, 'Mobile Command Officer Rourke', null),
+       (4, 40, 'ch0004084', 'Mr. Morgan', null),
+       (12, 42, 'ch0004073', 'Ms. Perky', null),
+       (13, 42, 'ch0002021', 'Barbara Fitts', null),
+       (9, 43, 'ch0003712', 'Peach', null),
+       (35, 43, 'ch0009874', 'Sally Lester', null);
+GO
