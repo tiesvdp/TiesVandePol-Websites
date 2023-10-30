@@ -13,23 +13,28 @@ body {
     background-position: 0% 40%;
     background-size: cover;
     background-repeat: no-repeat;
+    backdrop-filter: brightness(0.8);
     font-family: 'Prompt', sans-serif;
     color: var(--wit);
 }
 
 @media (max-width: 991px) {
     body {
-        background-blend-mode: multiply;
+        background-size: 200%;
+        background-position: center center;
+        backdrop-filter: brightness(0.6);
+        background-color: #0e0f0a71;
     }
 }
 
 @media (max-width: 991px) {
     .sidebar {
         background-color: #0e0f0a71;
-        backdrop-filter: blur(3px);
+        background-blend-mode: screen;
+        backdrop-filter: blur(5px);
         align-items: flex-end !important;
-        width: 45% !important;
         border-left: 1px solid var(--wit) !important;
+        width: 40% !important;
     }
     
     .offcanvas-end .offcanvas-header .btn-close {
@@ -45,13 +50,19 @@ body {
     }
 
     .titlebox {
+        width: 100%;
         margin-left: 0px !important;
+        margin-right: 0px !important;
+        margin-top: 2vh !important;
         text-align: center;
-        width: 97%;
     }
 
     .big {
-        font-size: 3em !important;
+        font-size: 2.3em !important;
+    }
+
+    .col-12 {
+        text-align: center !important;
     }
 }
 
@@ -65,8 +76,7 @@ body {
 
 .thin {
     font-size: 1.2em;
-    margin: 0px 0px 0px 0px;
-    height: fit-content;
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: normal;
 }
@@ -75,6 +85,10 @@ body {
     margin-top: 0;
     margin-bottom: 0;
     font-size: 4em;
+}
+
+.op70 {
+    opacity: 0.7;
 }
 
 .offcanvas-transition {
@@ -95,14 +109,17 @@ body {
     text-decoration-color: var(--grijs);
 }
 
-.lichtBlauw:hover {
+.lichtBlauw {
     background-color: var(--lichtBlauw);
+}
+.lichtBlauw:hover {
+    background-color: #39729e;
 }
 
 /* Intro styles */
 .intro {
     position: fixed;
-    z-index: 1000;
+    z-index: 100;
     left: 0;
     top: 0;
     width: 100%;
@@ -114,6 +131,7 @@ body {
 
 .logo-header {
     position: absolute;
+    z-index: 100;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -122,12 +140,14 @@ body {
 
 .logo {
     position: relative;
+    z-index: 100;
     display: inline-block;
     bottom: -20px;
     opacity: 0;
 }
 
 .logo.active {
+    z-index: 100;
     bottom: 0;
     opacity: 1;
     transition: ease-in-out 0.5s;
@@ -135,6 +155,7 @@ body {
 
 .logo.fade {
     bottom: 150px;
+    z-index: 100;
     opacity: 0;
     transition: ease-in-out 0.5s;
 }
