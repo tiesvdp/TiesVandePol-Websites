@@ -18,6 +18,22 @@ body {
     color: var(--wit);
 }
 
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 10px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--wit);
+    border: 1px solid var(--grijs);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--zwart);
+}
+
 @media (max-width: 991px) {
     body {
         background-size: 200%;

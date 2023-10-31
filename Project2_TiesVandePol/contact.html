@@ -4,69 +4,116 @@
     <title>Index</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Ties Van de Pol"></meta>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
-    <meta name="author" content="Ties Van de Pol"></meta>
-
+    <script src="https://kit.fontawesome.com/0ae6928776.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 
-<body class="vh-100 overflow-hidden">
-
-    <div class="titlebox position-absolute mx-4 mt-4">
+<body class="vh-100">
+  <div class="fixPos position-absolute background">
+    <div class="titlebox mx-4 mt-4">
       <h1 class="fw-bold title" href="#">C O N T A C T</h1>
     </div>
-
-  <div class="container overflow-hidden">
-    <nav class="navbar navbar-expand-lg bg-transparent navbar-dark fixed-top">
-        <button class="navbar-toggler shadow-none border-0 ms-auto mt-2 mx-2 order-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="sidebar offcanvas offcanvas-end offcanvas-transition align-items-center order-1" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <button type="button" class="btn-close btn-close-white ms-auto order-2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="container overflow-hidden z-1">
+      <nav class="navbar navbar-expand-lg bg-transparent navbar-dark fixed-top">
+          <button class="navbar-toggler shadow-none border-0 ms-auto mt-2 mx-2 order-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="sidebar offcanvas offcanvas-end offcanvas-transition align-items-center order-1" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <button type="button" class="btn-close btn-close-white ms-auto order-2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column">
+              <ul class="navbar-nav pe-3 ms-auto mt-3">
+                <li class="nav-item px-2 fs-5">
+                  <a class="nav-link" href="index.html">home</a>
+                </li>
+                <li class="nav-item px-2 fs-5">
+                  <a class="nav-link" href="about.html">about</a>
+                </li>
+                <li class="nav-item px-2 fs-5">
+                  <a class="nav-link" href="projects.html">projects</a>
+                </li>
+                <li class="nav-item px-2 fs-5">
+                  <a class="nav-link" href="cv.html">cv</a>
+                </li>
+                <li class="nav-item px-2 fs-5">
+                  <a class="nav-link active" aria-current="page" href="contact.html">contact</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="offcanvas-body d-flex flex-column">
-            <ul class="navbar-nav pe-3 ms-auto mt-3">
-              <li class="nav-item px-2 fs-5">
-                <a class="nav-link" href="#">home</a>
-              </li>
-              <li class="nav-item px-2 fs-5">
-                <a class="nav-link" href="#">about</a>
-              </li>
-              <li class="nav-item px-2 fs-5">
-                <a class="nav-link" href="#">projects</a>
-              </li>
-              <li class="nav-item px-2 fs-5">
-                <a class="nav-link" href="#">cv</a>
-              </li>
-              <li class="nav-item px-2 fs-5">
-                <a class="nav-link active" aria-current="page" href="contact.html">contact</a>
-              </li>
-            </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="emptyBar col"></div>
+      </div>
+      <div class="row my-5">
+        <div class="contactContainer container border border-3 rounded-4 d-flex flex-column align-items-center p-4">
+          <form method="post" action="mailto:tiesvdp@gmail.com">
+            <div class="mb-3">
+              <label for="name" class="form-label thin">Name</label>
+              <input type="text" class="form-control rounded-0" name="name" id="name" placeholder="My name is..." required>
+            </div>
+    
+            <div class="mb-3">
+              <label for="email" class="form-label thin">E-mail</label>
+              <input type="email" class="form-control rounded-0" name="email" id="email" placeholder="@ something..." required>
+            </div>
+    
+            <div class="mb-3">
+              <label for="subject" class="form-label thin">Subject</label>
+              <input type="text" class="form-control rounded-0" name "subject" id="subject" placeholder="Bonjour!" required>
+            </div>
+    
+            <div class="mb-3">
+              <label for="area rounded-0" class="form-label thin">Question</label>
+              <textarea class="form-control p-3" name="area" id="area" placeholder="Question..."></textarea>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mt-3">
+                <div class="form-group">
+                  <select class="selector form-control" id="dropdownMenu">
+                    <option class="text-center" value="choose" disabled selected>Choose a subject</option>
+                    <option value="option1">- Plugin development</option>
+                    <option value="option2">- Frontend development</option>
+                    <option value="option3">- Music creation</option>
+                    <option value="option4">- Music production</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6 mt-3">
+                <button type="submit" class="selector btn btn-primary w-100 bg-transparent">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="footerClass py-2 mt-1 fixed-bottom">
+      <div class="container-fluid text-light">
+        <div class="row">
+          <div class="footerCol col-md-4 col-12">
+            <a class="wit px-1" href="https://www.facebook.com/ties.vandepol" title="Go to Facebook" target="_blank"><i class="fa-brands fa-facebook-f op70"></i></a>
+            <a class="wit pe-1" href="https://www.instagram.com/tiesvdp/" title="Go to Instagram" target="_blank"><i class="fa-brands fa-instagram op70"></i></a>
+            <a class="wit pe-1" href="https://github.com/tiesvdp" title="Go to Github" target="_blank"><i class="fa-brands fa-github op70"></i></a>
+            <a class="wit pe-1" href="https://soundcloud.com/ties-van-de-pol" title="Go to SoundCloud" target="_blank"><i class="fa-brands fa-soundcloud op70"></i></a>
+          </div>
+          <div class="footerCol col-md-8 col-12 text-end">
+            <small class="wit op70">&copy; Copyright by Ties Van de Pol. All rights reserved.</small>
           </div>
         </div>
       </div>
-    </nav>
+    </footer>
   </div>
- 
-  <section class="position-absolute top-50 start-0 translate-middle-y">
-    <div class="container">
-        <div class="row">
-            <div class="mx-3">
-              <p class="thin">Hi! My name is Ties and I'm a</p>
-                <p class="big">Frontend developer,</p>
-                <p class="big">Plugin developer,</p>
-                <p class="big">Musician.</p>
-                <a class=" btn btn-primary lichtBlauw mt-3 p-2 border border-0" href="#" role="button">View my projects</a>
-            </div>
-        </div>
-    </div>
-  </section>
 </body>
 </html>

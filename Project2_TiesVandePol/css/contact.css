@@ -10,54 +10,25 @@
 body {
     background-image: url("../img/background-reduced.jpg");
     background-color: #0e0f0a71;
-    background-position: 0% 40%;
+    background-position: 0% 90%;
     background-size: cover;
     background-repeat: no-repeat;
+    background-blend-mode: multiply;
     font-family: 'Prompt', sans-serif;
     color: var(--wit);
 }
 
-@media (max-width: 991px) {
-    body {
-        background-size: 200%;
-        background-position: center center;
-        background-blend-mode: multiply;
-        background-color: #0e0f0a71;
-    }
+.background {
+    content: "";
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    width: 100%;
 }
 
-@media (max-width: 991px) {
-    .sidebar {
-        background-color: #0e0f0a71;
-        backdrop-filter: blur(3px);
-        align-items: flex-end !important;
-        border-left: 1px solid var(--wit) !important;
-        width: 40% !important;
-    }
-    
-    .offcanvas-end .offcanvas-header .btn-close {
-        order: 2;
-    }
-
-    .offcanvas-end .offcanvas-header .btn-close.ms-auto {
-        order: 1;
-    }
-
-    .offcanvas-end .offcanvas-body .navbar-nav {
-        text-align: right;
-    }
-
-    .titlebox {
-        width: 100vw;
-        margin-left: 0px !important;
-        margin-right: 0px !important;
-        margin-top: 2vh !important;
-        text-align: center;
-    }
-
-    .big {
-        font-size: 2.3em !important;
-    }
+.contactContainer {
+    backdrop-filter: invert(10%) contrast(0.8) brightness(0.3) blur(1px);
+    width: auto;
 }
 
 .wit {
@@ -69,10 +40,9 @@ body {
 }
 
 .thin {
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: normal;
+    font-family: 'prompt', sans-serif;
 }
 
 .big {
@@ -80,6 +50,43 @@ body {
     margin-bottom: 0;
     font-size: 4em;
 }
+
+.op70 {
+    opacity: 0.7;
+}
+
+#area {
+    min-height: 200px;
+    max-height: fit-content;
+    border: 2px solid var(--wit) !important;
+    border-radius: 10px !important;
+}
+
+
+#name::placeholder, #email::placeholder, #subject::placeholder, #area::placeholder, .form-control {
+    color: #f4faff52;
+}
+
+.selector option {
+    background-color: var(--zwart);
+    color: var(--grijs);
+}
+
+.selector.btn:hover, .selector.form-control:hover {
+    border-color: var(--lichtBlauw); /* Replace with your desired color */
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--wit); /* Replace with your desired color */
+}
+
+.form-control:enabled {
+    background-color: transparent;
+    color: var(--wit);
+}
+
+/*navbar*/
 
 .offcanvas-transition {
     transition: transform 0.3s ease-in-out;
@@ -104,6 +111,38 @@ body {
 }
 .lichtBlauw:hover {
     background-color: var(--blauw);
+}
+
+.emptyBar {
+    height: 10vh;
+}
+
+#name, #email, #subject, #area {
+    width: 30vw;;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid var(--wit);
+    padding-left: 2px;
+    padding-bottom: 5px;
+    outline: 2px solid transparent;
+}
+
+#name:hover, #email:hover, #subject:hover {
+    border-bottom: 3px solid var(--wit);
+    margin-bottom: -1px;
+}
+
+.selector {
+    background-color: transparent;
+    border: 2px solid var(--wit);
+    border-radius: 10px;
+}
+
+#submit:hover {
+    background-color: var(--zwart);
+    font-weight: bold;
+    border: 3px var(--wit) solid;
+    margin-bottom: -2px;
 }
 
 /* Intro styles */
@@ -144,4 +183,79 @@ body {
     bottom: 150px;
     opacity: 0;
     transition: ease-in-out 0.5s;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 10px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--wit);
+    border: 1px solid var(--grijs);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--zwart);
+}
+
+/* media */
+@media (max-width: 991px) {
+    body {
+        background-size: 200%;
+        background-position: center center;
+        background-color: #0e0f0a71;
+    }
+}
+
+@media (max-width: 991px) {
+    .sidebar {
+        background-color: #0e0f0a71;
+        backdrop-filter: blur(3px);
+        align-items: flex-end !important;
+        border-left: 1px solid var(--wit) !important;
+        width: 40% !important;
+    }
+    
+    .offcanvas-end .offcanvas-header .btn-close {
+        order: 2;
+    }
+
+    .offcanvas-end .offcanvas-header .btn-close.ms-auto {
+        order: 1;
+    }
+
+    .offcanvas-end .offcanvas-body .navbar-nav {
+        text-align: right;
+    }
+
+    .titlebox {
+        width: 100%;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        margin-top: 2vh !important;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    .big {
+        font-size: 2.3em !important;
+    }
+
+    #name, #email, #subject, #area {
+        width: 70vw;;
+    }
+
+    .col-12 {
+        text-align: center !important;
+    }
+
+    .fixed-bottom {
+        position: static;
+    }
 }
