@@ -22,7 +22,7 @@
   </div>
   <div class="container-fluid overflow-hidden z-1">
     <nav class="navbar navbar-expand-lg bg-transparent navbar-dark">
-      <button class="navbar-toggler shadow-none border-0 ms-auto mt-2 mx-2 order-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <button class="navbar-toggler shadow-none border-0 ms-auto mt-2 order-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="sidebar offcanvas offcanvas-end offcanvas-transition align-items-center order-1" tabindex="-1" id="offcanvasNavbar">
@@ -169,6 +169,8 @@
       $('.slickSlider').slick({
         dots: true,
         slidesToShow: 3,
+        autoplay: true,
+        autoplaySpeed: 6000,
         cssEase: 'linear',
         responsive: [
         {

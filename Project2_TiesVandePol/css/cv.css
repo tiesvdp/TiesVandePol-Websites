@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url("../img/background-reduced.jpg");
+    background-image: url("../img/background-blurred.jpg");
     background-color: #0e0f0a71;
     background-attachment: scroll;
     background-repeat: no-repeat;
@@ -49,10 +49,6 @@ body {
 
 .slickItem a {
     max-height: 280px;
-}
-
-.slickItem img:hover {
-    border-color: var(--lichtBlauw) !important;
 }
 
 .wit {
@@ -253,13 +249,13 @@ font-size: 1.7em;
 
     @keyframes moveBackground {
         0% {
-            background-position: 0 10%;
+            background-position: 0 70%;
         }
         50% {
-            background-position: 30% 10%;
+            background-position: 30% 70%;
         }
         100% {
-            background-position: 0 10%;
+            background-position: 0 70%;
         }
     }
 
@@ -271,7 +267,11 @@ font-size: 1.7em;
         font-size: 1.5em;
     }
 
-    .fixed-bottom {
-        position: static;
+    .miniContainer {
+        width: 60% !important;
     }
+}
+
+/*.row {
+    border: 1px solid red;
 }
