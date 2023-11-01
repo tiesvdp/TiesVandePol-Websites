@@ -19,7 +19,7 @@ body {
     background-blend-mode: multiply;
     font-family: 'Prompt', sans-serif;
     color: var(--wit);
-    animation: moveBackground 45s linear infinite;
+    animation: moveBackground 90s linear infinite;
 }
 
 .filter {
@@ -31,11 +31,13 @@ body {
     0% {
         background-position: 0 0;
     }
-    100% {
+    50% {
         background-position: 0 70%;
     }
+    100% {
+        background-position: 0 0;
+    }
 }
-
 .wit {
     color: var(--wit);
 }
@@ -123,9 +125,5 @@ body {
 
     .col-12 {
         text-align: center !important;
-    }
-
-    footer {
-        position: static !important;
     }
 }

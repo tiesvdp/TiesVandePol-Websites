@@ -18,40 +18,40 @@ body {
     animation: moveBackground 90s linear infinite;
 }
 
-.filter {
-    backdrop-filter: blur(3px);
-    border-bottom: 3px solid var(--wit);
-}
-
 @keyframes moveBackground {
     0% {
-        background-position: 0 0;
+        background-position: 0 30%;
     }
     50% {
-        background-position: 0 60%;
+        background-position: 30% 30%;
     }
     100% {
-        background-position: 0 0;
+        background-position: 0 30%;
     }
 }
 
-.textContainer {
+.cvContainer {
     width: 85vw;
 }
 
-.blockContainer {
-    background-color: #0e0f0ace;
+.thumbnailContainer {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 20vw;
+}
+
+.imgContainer {
+    max-width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    filter: brightness(0.9);
 }
 
 .slickItem a {
     max-height: 280px;
 }
 
-img {
-    filter: brightness(0.8);
-}
-
-.imgContainer:hover {
+.slickItem img:hover {
     border-color: var(--lichtBlauw) !important;
 }
 
@@ -59,12 +59,22 @@ img {
     color: var(--wit);
 }
 
+.bgWit {
+    background-color: var(--wit);
+    height: 1vh;
+}
+
+.bgDark {
+    background-color: #0e0f0ab6;
+    backdrop-filter: blur(2px);
+}
+
 .title {
     font-size: 3em;
 }
 
 .thin {
-    font-size: 1.3em;
+    font-size: 2em;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
@@ -186,6 +196,12 @@ img {
 }
 
 /* media */
+
+@media (max-width: 1200px) {
+    .skills {
+font-size: 1.7em;
+    }
+}
 @media (max-width: 991px) {
     body {
         background-size: 700%;
@@ -235,19 +251,27 @@ img {
         text-align: center !important;
     }
 
-    .fixed-bottom {
-        position: static;
-    }
-
     @keyframes moveBackground {
         0% {
-            background-position: 0 0;
+            background-position: 0 10%;
         }
         50% {
-            background-position: 0 25%;
+            background-position: 30% 10%;
         }
         100% {
-            background-position: 0 0;
+            background-position: 0 10%;
         }
+    }
+
+    .thumbnailContainer {
+        width: 40vw;
+    }
+
+    .skills {
+        font-size: 1.5em;
+    }
+
+    .fixed-bottom {
+        position: static;
     }
 }
