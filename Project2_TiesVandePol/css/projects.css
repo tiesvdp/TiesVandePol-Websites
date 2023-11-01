@@ -40,16 +40,6 @@ body {
     }
 }
 
-
-
-.background {
-    content: "";
-    top: 0;
-    left: 0;
-    min-height: 100%;
-    width: 100%;
-}
-
 .projectsContainer {
     backdrop-filter: invert(10%) contrast(0.8) brightness(0.3) blur(1px);
     width: auto;
@@ -63,49 +53,12 @@ body {
     font-size: 3em;
 }
 
-.thin {
-    font-size: 1.5em;
-    margin: 0;
-    font-family: 'prompt', sans-serif;
-}
-
 .op70 {
     opacity: 0.7;
 }
 
 .card a:hover {
     border-color: var(--lichtBlauw) !important;
-}
-
-#area {
-    min-height: 200px;
-    max-height: fit-content;
-    border: 2px solid var(--wit) !important;
-    border-radius: 10px !important;
-}
-
-
-#name::placeholder, #email::placeholder, #subject::placeholder, #area::placeholder, .form-control {
-    color: #f4faff52;
-}
-
-.selector option {
-    background-color: var(--zwart);
-    color: var(--grijs);
-}
-
-.selector.btn:hover, .selector.form-control:hover {
-    border-color: var(--lichtBlauw); /* Replace with your desired color */
-}
-
-.form-control:focus {
-    box-shadow: none;
-    border-color: var(--wit); /* Replace with your desired color */
-}
-
-.form-control:enabled {
-    background-color: transparent;
-    color: var(--wit);
 }
 
 /*navbar*/
@@ -125,41 +78,6 @@ body {
     text-decoration: underline;
     text-underline-offset: 0.3em;
     text-decoration-color: var(--grijs);
-}
-
-.lichtBlauw {
-    background-color: var(--lichtBlauw)
-}
-.lichtBlauw:hover {
-    background-color: var(--blauw);
-}
-
-#name, #email, #subject, #area {
-    width: 30vw;;
-    background-color: transparent;
-    border: 0;
-    border-bottom: 2px solid var(--wit);
-    padding-left: 2px;
-    padding-bottom: 5px;
-    outline: 2px solid transparent;
-}
-
-#name:hover, #email:hover, #subject:hover {
-    border-bottom: 3px solid var(--wit);
-    margin-bottom: -1px;
-}
-
-.selector {
-    background-color: transparent;
-    border: 2px solid var(--wit);
-    border-radius: 10px;
-}
-
-#submit:hover {
-    background-color: var(--zwart);
-    font-weight: bold;
-    border: 3px var(--wit) solid;
-    margin-bottom: -2px;
 }
 
 /* Intro styles */
@@ -259,16 +177,8 @@ body {
         font-size: 2em;
     }
 
-    #name, #email, #subject, #area {
-        width: 70vw;;
-    }
-
     .col-12 {
         text-align: center !important;
-    }
-
-    .fixed-bottom {
-        position: static;
     }
 
     .projectsContainer {

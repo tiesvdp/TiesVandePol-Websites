@@ -34,21 +34,11 @@ body {
     width: 85vw;
 }
 
-.thumbnailContainer {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 20vw;
-}
-
 .imgContainer {
     max-width: 100%;
     margin-left: 10px;
     margin-right: 10px;
     filter: brightness(0.9);
-}
-
-.slickItem a {
-    max-height: 280px;
 }
 
 .wit {
@@ -69,12 +59,6 @@ body {
     font-size: 3em;
 }
 
-.thin {
-    font-size: 2em;
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-}
-
 .Montserrat {
     font-family: Montserrat, arial;
     opacity: 0.9;
@@ -82,30 +66,6 @@ body {
 
 .op70 {
     opacity: 0.7;
-}
-
-
-#name::placeholder, #email::placeholder, #subject::placeholder, #area::placeholder, .form-control {
-    color: #f4faff52;
-}
-
-.selector option {
-    background-color: var(--zwart);
-    color: var(--grijs);
-}
-
-.selector.btn:hover, .selector.form-control:hover {
-    border-color: var(--lichtBlauw); /* Replace with your desired color */
-}
-
-.form-control:focus {
-    box-shadow: none;
-    border-color: var(--wit); /* Replace with your desired color */
-}
-
-.form-control:enabled {
-    background-color: transparent;
-    color: var(--wit);
 }
 
 /*navbar*/
@@ -126,14 +86,6 @@ body {
     text-underline-offset: 0.3em;
     text-decoration-color: var(--grijs);
 }
-
-.lichtBlauw {
-    background-color: var(--lichtBlauw)
-}
-.lichtBlauw:hover {
-    background-color: var(--blauw);
-}
-
 
 /* Intro styles */
 .intro {
@@ -239,10 +191,6 @@ font-size: 1.7em;
         font-size: 2em;
     }
 
-    #name, #email, #subject, #area {
-        width: 70vw;;
-    }
-
     .col-12 {
         text-align: center !important;
     }
@@ -259,10 +207,6 @@ font-size: 1.7em;
         }
     }
 
-    .thumbnailContainer {
-        width: 40vw;
-    }
-
     .skills {
         font-size: 1.5em;
     }
@@ -270,8 +214,4 @@ font-size: 1.7em;
     .miniContainer {
         width: 60% !important;
     }
-}
-
-/*.row {
-    border: 1px solid red;
 }

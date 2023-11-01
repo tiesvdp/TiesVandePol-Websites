@@ -91,13 +91,6 @@ body {
     text-decoration-color: var(--grijs);
 }
 
-.lichtBlauw {
-    background-color: var(--lichtBlauw)
-}
-.lichtBlauw:hover {
-    background-color: var(--blauw);
-}
-
 #name, #email, #subject, #area {
     width: 30vw;;
     background-color: transparent;
