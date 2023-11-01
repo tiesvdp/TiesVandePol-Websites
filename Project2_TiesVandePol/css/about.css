@@ -10,17 +10,45 @@
 body {
     background-image: url("../img/background-reduced.jpg");
     background-color: #0e0f0a71;
-    background-position: 0% 90%;
-    background-size: cover;
+    background-attachment: scroll;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
     font-family: 'Prompt', sans-serif;
     color: var(--wit);
+    animation: moveBackground 90s linear infinite;
 }
 
-.contactContainer {
-    backdrop-filter: invert(10%) contrast(0.8) brightness(0.3) blur(1px);
-    width: auto;
+.filter {
+    backdrop-filter: blur(3px);
+    border-bottom: 3px solid var(--wit);
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 0 60%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.textContainer {
+    width: 85vw;
+}
+
+.blockContainer {
+    background-color: #0e0f0ace;
+}
+
+.slickItem a {
+    max-height: 280px;
+}
+
+.slickItem img:hover {
+    border-color: var(--lichtBlauw) !important;
 }
 
 .wit {
@@ -32,20 +60,18 @@ body {
 }
 
 .thin {
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin: 0;
-    font-family: 'prompt', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.Montserrat {
+    font-family: Montserrat, arial;
+    opacity: 0.9;
 }
 
 .op70 {
     opacity: 0.7;
-}
-
-#area {
-    min-height: 200px;
-    max-height: fit-content;
-    border: 2px solid var(--wit) !important;
-    border-radius: 10px !important;
 }
 
 
@@ -98,33 +124,6 @@ body {
     background-color: var(--blauw);
 }
 
-#name, #email, #subject, #area {
-    width: 30vw;;
-    background-color: transparent;
-    border: 0;
-    border-bottom: 2px solid var(--wit);
-    padding-left: 2px;
-    padding-bottom: 5px;
-    outline: 2px solid transparent;
-}
-
-#name:hover, #email:hover, #subject:hover {
-    border-bottom: 3px solid var(--wit);
-    margin-bottom: -1px;
-}
-
-.selector {
-    background-color: transparent;
-    border: 2px solid var(--wit);
-    border-radius: 10px;
-}
-
-#submit:hover {
-    background-color: var(--zwart);
-    font-weight: bold;
-    border: 3px var(--wit) solid;
-    margin-bottom: -2px;
-}
 
 /* Intro styles */
 .intro {
@@ -185,8 +184,8 @@ body {
 /* media */
 @media (max-width: 991px) {
     body {
-        background-size: 200%;
-        background-position: center center;
+        background-size: 700%;
+        background-position: top right;
         background-color: #0e0f0a71;
     }
 }
@@ -234,5 +233,17 @@ body {
 
     .fixed-bottom {
         position: static;
+    }
+
+    @keyframes moveBackground {
+        0% {
+            background-position: 0 0;
+        }
+        50% {
+            background-position: 0 25%;
+        }
+        100% {
+            background-position: 0 0;
+        }
     }
 }
